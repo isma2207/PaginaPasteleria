@@ -1,0 +1,106 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header {
+    margin: 0;
+    position: fixed;
+    background-color: rgb(252, 198, 198);
+    width: 100%;
+    z-index: 1000;
+    border-style: inset;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 20px;
+    border-color: rgb(253, 192, 192);
+}
+
+.logo img{
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    filter: drop-shadow(1px 1px 0.1px rgb(0, 0, 0));
+}
+
+.header a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.logo-nav-container{
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 0;
+}
+
+.MenuNav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.MenuNav ul li{
+    display: inline-block;
+}
+
+.MenuNav ul li a{
+    display: block;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    background-color: rgb(255, 175, 175);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    background: rgb(255, 130, 130);
+    border-radius: 4px;
+}
+main {
+    padding-top: 12rem;
+}
+
+.portada1I {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(252, 198, 198);
+    margin-top: 0;
+}
+
+
+
+/*UNIVERSAL*/
+ h1{
+    font-size: 60px;
+    font-weight: bolder;
+    margin: 2rem;
+    color: rgb(48, 7, 12);
+}
+#titulo{
+    text-align: center;
+    background-color: rgb(255, 173, 173);
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 2rem;
+    color: rgb(48, 7, 12);
+}
+article{
+    border-right: 2px rgb(48, 7, 12);
+    color: rgb(48, 7, 12);
+    padding: 1rem;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    background-color: rgb(251, 229, 229);
+    font-family: 'Segoe UI';
+}
+footer{
+    border-top: 2px solid rgb(48, 7, 12);
+    padding: 2rem;
+    background-color: rgb(252, 198, 198);
+}

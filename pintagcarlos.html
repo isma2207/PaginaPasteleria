@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ejemplo de HTML5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+
+    <script>
+        const cod = (element) => document.querySelector(element);
+        function showDialog(x) {
+            var div = cod(".elemento");
+            var newContent = document.createTextNode("");
+            if (x == 1) {
+                newContent = document.createTextNode("TORTA DE VAINILLA: $10,00");
+            } else if (x == 2) {
+                newContent = document.createTextNode("TORTA DE CHOCOLATE $ 10,00");
+            } else if (x == 3) {
+                newContent = document.createTextNode("TORTA VAINILLA CON ALMENDRA $12,00");
+            } else if (x == 4) {
+                newContent = document.createTextNode("TORTA DE CHOCOLATE CON FRUTILLA $13,00");
+            } else if (x == 5) {
+                newContent = document.createTextNode("TORTA DE CAPUCHINO $10,00");
+            } else if (x == 6) {
+                newContent = document.createTextNode("TORTA DE VAINIILA CON BOLITAS $12,00");
+            } else if (x == 7) {
+                newContent = document.createTextNode("TORTA BAÑADA EN CHOCOLATE $13,00");
+            } else if (x == 8) {
+                newContent = document.createTextNode("TORTA DE JAMAICA $14,00");
+            }
+            div.appendChild(newContent);
+        }
+
+        function hideDialog(nodoA) {
+            var div = cod(".elemento");
+            div.removeChild(div.firstChild);
+        }
+
+
+    </script>
+    <!--hoja de estilo interna-->
+    <style>
+        #contenedor {
+            width: 90%;
+            margin: auto;
+            background-color: rgb(255, 236, 236);
+        }
+
+        #contenedorPrincipal {
+            width: 90%;
+            margin: 10ch;
+        }
+
+        .elemento img {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
+        }
+
+        .elemento {
+            border: 5px solid #ffb2b2;
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 105px;
+            margin-left: 5px;
+            margin-top: 5px;
+            background-color: rgb(252, 207, 207);
+
+        }
+
+        #galeria {
+            grid-template-rows: 280px 280px !important;
+        }
+    </style>
+    <!--vinculando hoja de estilo externa-->
+    <link rel="stylesheet" href="estilos/stylesC.css">
+    <title>TORTAS MEDIANAS</title>
+    <!--scripts-->
+
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadoTortas.png" alt="Postres_Portada" width="1271" height="120" />
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html" style="background-color: rgb(255, 130, 130);">Tortas</a></li>
+                    <li><a href="SalazarMoises.html">Postres</a></li>
+                    <li><a href="holguinjosue.html">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html">Solicitar Empleo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 14rem; text-align: center;">
+        <div class="elemento" style="height: 15px;margin: auto;width: 760px;margin-bottom: 0px;"></div><br><br>
+        <a href="pintagcarlosform.html" class="elemento" style="height: 15px;margin: auto;width: 760px; 
+        margin-bottom: 0px; text-decoration: none; margin-top: 100px;">Comprar</a>
+        <div id="contenedorPrincipal">
+            <div id="galeria">
+                <div class="elemento">
+                    <img src="imagenes/descarga.jpg" alt="PASTEL1" />
+                    <p onmouseover="showDialog(1)" onmouseout="hideDialog(this)">TORTA DE VAINILLA</p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/pastel2.jpg" alt="PASTEL 2" />
+                    <p onmouseover="showDialog(2)" onmouseout="hideDialog(this)">TORTA DE CHOCOLATE</p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/Pastel3.jpg" alt="PASTEL 3" />
+                    <p onmouseover="showDialog(3)" onmouseout="hideDialog(this)">TORTA DE VAINILLA CON ALMENDRA</p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/pastel4.jpg" alt="PASTEL 4" />
+                    <p onmouseover="showDialog(4)" onmouseout="hideDialog(this)">TORTA DE CHOCOLATE CON FRUTILLA</p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/pastel5.jpg" alt="PASTEL 5" />
+                    <p onmouseover="showDialog(5)" onmouseout="hideDialog(this)">TORTA DE CAPUCHINO </p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/pastel6.jpg" alt="PASTEL 6" />
+                    <p onmouseover="showDialog(6)" onmouseout="hideDialog(this)"> TORTA DE VAINILLA CON BOLITAS </p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/pastel7.jpg" alt="PASTEL 6" />
+                    <p onmouseover="showDialog(7)" onmouseout="hideDialog(this)"> TORTA DE VAINILLA CON BOLITAS </p>
+                </div>
+                <div class="elemento">
+                    <img src="imagenes/pastel8.jpg" alt="PASTEL 6" />
+                    <p onmouseover="showDialog(8)" onmouseout="hideDialog(this)"> TORTA DE VAINILLA CON BOLITAS </p>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="secciones">
+            <h2>SECCIONES DE PASTELES </h2>
+            <article>
+                <h3 class="m">PASTELES FAMILIARES Y MEDIANOS</h3>
+                <p class="precio">PRECIOS:</p>
+            </article>
+
+        </section>
+    </main>
+    <aside>
+        <div>
+            <p id="c">ENCUENTRA PASTELES A SU AGRADO ESTAMOS UBICADO EN EL CENTRO DE LA CIUDAD</p>
+        </div>
+        <ul>
+            <!--hoja de estilo en linea-->
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA DE CHOCOLATE $ 10,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE VAINILLA $10,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA VAINILLA CON ALMENDRA $12,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE CHOCOLATE CON FRUTILLA $13,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA DE CAPUCHINO $10,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE VAINIILA CON BOLITAS $12,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA BAÑADA EN CHOCOLATE $13,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE JAMAICA $14,00</li>
+        </ul>
+    </aside>
+    <footer>
+        <section style="padding: 20px; background-color: rgb(252, 198, 198)">
+            <div class="info" style="text-align: center;">
+                <h4>Información</h4>
+                <address>
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br><br>
+                </address>
+            </div>
+            <address style="text-align: center;">
+                <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>

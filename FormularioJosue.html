@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar</title>
+    <link rel="stylesheet" href="estilos/styleJ.css">
+    <style>
+        #FormVenta{
+            border: 2px solid rgb(48, 7, 12);
+            border-radius: 5%;
+        }
+        #Formularioas{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+        }
+        #formulario{
+            padding: 2rem;
+        }
+        h4{
+            text-align: center;
+            color: rgb(48, 7, 12);
+        }
+        input{
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 7%;
+        }
+        select{
+        width: 13rem;
+		margin: 1rem;
+		height: 3.5rem;
+        border-radius: 7%;
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+        }
+        #Etiquetas{
+            border-right: 3px rgb(48, 7, 12) solid;
+        }
+        
+        
+    </style>
+</head>
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadoPanaderia.png" alt="Postres_Portada" width="1271" height="120"/>
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="holguinjosue.html">Regresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="margin-left: 10px; margin-right: 10px;">
+        <section id="principal">
+            <h2 id="titulo">Panadería</h2>
+            <h4>Ingrese sus datos para el envío y metodo de pago: </h4>
+            <div id="formulario">
+                <form id="FormVenta">
+                    <div id="Formularioas">
+                        <div id="Etiquetas">
+                            
+                        <label>Nombres: </label><br><br><br><br>
+                        <label>Apellidos: </label><br><br><br><br>
+                        <label>Telefono: </label><br><br><br><br>
+                        <label>Correo Electronico: </label><br><br> <br><br>
+                        <label> Elija el metodo de pago: </label><br><br><br>
+                        <label>Elija el tipo de pan:</label><br><br><br>
+                        <Label>Seleccione el pan a comprar: </Label>
+                        </div>
+
+                        <div id="Informacion">
+                            <div id="datos">
+                                <input type="text" id="nombre" class="textIn" placeholder="Escribe tu nombre" /><br>
+                                
+                                <input type="text" id="apellidos" class="textIn" placeholder="Escribe tu Apellido" /><br>
+                                
+                                <input type="text" id="telefono" name="telefono" class="textIn" placeholder="Escribe tu numero de celular" /><br>
+                                
+                                <input type="text" id="correo" class="textIn" placeholder="Escribe tu Correo Electronico." /><br>
+                                </div>
+                            <div id="Pago">
+                                <select name="MetodoPag" id="MetodoPag" class="ItemCB">
+                                    <option value="0">Debito Bancario.</option>
+                                    <option value="1">Tarjeta de Credito.</option>
+                                    <option value="2">Tarjeta de Regalo.</option>
+                                </select>
+    
+                            </div>
+                            <div id="RadioBtn">
+                                
+                                <input class="Tipopan" id="PS" type="radio" name="Tipopan" value="PS"  onclick="toggle(this)"/> Pan de sal.
+                                <input class="Tipopan" id="PI" type="radio" name="Tipopan" value="PI" onclick="toggle(this)"/> Pan integral.
+                                <input class="Tipopan" id="PM" type="radio" name="Tipopan" value="PM" onclick="toggle(this)"/> Pan de molde.
+                                <input class="Tipopan" id="PD" type="radio" name="Tipopan" value="PD" onclick="toggle(this)"/> Pan de dulce.
+                            </div>
+                            <div>
+                  
+                                <div id="PanSalChB" style="display:none">
+                                    <input type="checkbox" name="Pan1" id="1" value="PanEnr"  class="CheckIn" /> Pan Enrollado 
+                                    <input type="checkbox" name="Pan2" id="2" value="PanCachito"  class="CheckIn" /> Pan Cachito 
+                                    <input type="checkbox" name="Pan3" id="3" value="PanBolillo"  class="CheckIn" /> Pan Bolillo 
+                                    <input type="checkbox" name="Pan4" id="4" value="PanMixto" class="CheckIn" /> Pan Mixto 
+                                </div>
+    
+                                <div id="PanIntegralChB" style="display:none">
+                                    <input type="checkbox" name="PanProd" id="5" value="PanIn"  class="CheckIn" /> Pan Integral 
+                                    <input type="checkbox" name="PanProd" id="6" value="PanMultiCe"  class="CheckIn" /> Pan multicereal 
+                                    <input type="checkbox" name="PanProd" id="7" value="PanCent" class="CheckIn" /> Pan Canteno 
+                                    <input type="checkbox" name="PanProd" id="8" value="PanMasM"  class="CheckIn" /> Pan de Masa Madre 
+                                </div>
+    
+                                <div id="PanMoldeChB" style="display:none">
+                                    <input type="checkbox" name="PanProd" id="9" value="PanMolB"  class="CheckIn" /> Pan de Molde Blanco 
+                                    <input type="checkbox" name="PanProd" id="10" value="PanMolIn"  class="CheckIn" /> Pan de Molde Integral 
+                                    <input type="checkbox" name="PanProd" id="11" value="Baguette"  class="CheckIn" /> Baguette 
+                                    <input type="checkbox" name="PanProd" id="12" value="PanBrioch"  class="CheckIn" /> Pan Brioche 
+                                </div>
+    
+                                <div id="PanDulceChB" style="display:none">
+                                    <input type="checkbox" name="PanProd" id="13" value="PanDul"  class="CheckIn" /> Pan Dulce 
+                                    <input type="checkbox" name="PanProd" id="14" value="PanPin"  class="CheckIn" /> Pan de Piña 
+                                    <input type="checkbox" name="PanProd" id="15" value="PanChoc"  class="CheckIn" /> Pan de chocolate 
+                                    <input type="checkbox" name="PanProd" id="16" value="PanCaS" class="CheckIn" /> Pan Cara sucia 
+                                </div>
+                            </div>
+    
+                            <div class="text-center">
+                                <input type="submit" class="btn btn primary" value="Enviar" onclick="validar()">
+                                <input type="submit" class="btn btn primary" value="Cancelar">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript">
+        
+
+        function validar(){
+            var valido = true;
+            var Nombretxt = document.getElementById('nombre').value;
+            var Apellidotxt = document.getElementById('apellidos').value;
+            var Telefono = document.getElementById("telefono").value;
+            var Correotxt = document.getElementById('correo').value;
+            var TipopanRadio = document.getElementById('Tipopan');
+            var PSRadio = document.getElementById('PS');
+            var PanCompraChB=document.getElementsByClassName('CheckIn');
+            
+            var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
+            var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            var telefonoreg = /^\d{10}$/	; // para validar datos que deban tener 10 numeros
+            
+            if (Nombretxt.length == 0) {
+                window.alert("Por favor ingrese su nombre para el envio.");
+                return false;
+            }else if(!letra.test(Nombretxt.trim())){
+				window.alert("Solo se aceptan letras.");
+				return false;
+			}
+            
+            if (Apellidotxt.length == 0) {
+                window.alert("Por favor ingrese su Apellido para el envio.");
+                return false;
+            } else if(!letra.test(Apellidotxt.trim())){
+				window.alert("Solo se aceptan letras.");
+				return false;
+			}
+            if(Telefono.length == 0){
+                window.alert("Por favor ingrese un numero de telefono");
+                return false;
+            }else if(!telefonoreg.test(Telefono)){
+				window.alert("Ingresa un numero valido de 10 digitos.");
+				return false;
+			}
+
+            if (Correotxt.length == 0) {
+                window.alert("Por favor ingrese un correo electronico.");
+                return false;
+            }else if (!correo.test(Correotxt.trim())){
+                window.alert("Ingresa un correo valido.");
+                return false;
+            }
+
+            if(!document.getElementById("PS").checked&&!document.getElementById("PI").checked&&!document.getElementById("PM").checked&&!document.getElementById("PD").checked){
+				window.alert("Seleccione un tipo de pan para su envío.");
+				return false;
+			}
+            
+            for(x=0;x<PanCompraChB.length;x++){
+            if(PanCompraChB[x].checked){
+                window.alert("Pronto se le enviará el pedido.");
+                return true;
+            }
+            }
+                alert("Debe seleccionar al menos un tipo de pan.");
+                return false;
+        }
+
+        
+    </script>
+    
+    <script type="text/javascript">
+        function toggle(elemento){
+            if(elemento.value=="PS"){
+                document.getElementById("PanSalChB").style.display = "block";
+                document.getElementById("PanIntegralChB").style.display = "none";
+                document.getElementById("PanMoldeChB").style.display = "none";
+                document.getElementById("PanDulceChB").style.display = "none";
+            } else if(elemento.value=="PI"){
+                document.getElementById("PanSalChB").style.display = "none";
+                document.getElementById("PanIntegralChB").style.display = "block";
+                document.getElementById("PanMoldeChB").style.display = "none";
+                document.getElementById("PanDulceChB").style.display = "none";
+            } else if(elemento.value=="PM"){
+                document.getElementById("PanSalChB").style.display = "none";
+                document.getElementById("PanIntegralChB").style.display = "none";
+                document.getElementById("PanMoldeChB").style.display = "block";
+                document.getElementById("PanDulceChB").style.display = "none";
+            } else if(elemento.value=="PD"){
+                document.getElementById("PanSalChB").style.display = "none";
+                document.getElementById("PanIntegralChB").style.display = "none";
+                document.getElementById("PanMoldeChB").style.display = "none";
+                document.getElementById("PanDulceChB").style.display = "block";
+            }
+        }
+    </script>
+
+        <footer id="footer">
+            <h3 style="text-align: center;">Informacion</h3>
+        <address style="text-align: center;">
+            Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a><br>
+            Visitanos en: Guerrero Valenzuela y Carbo<br>
+            Ecuador, Guayaquil<br><br>
+            <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                href="https://www.instagram.com/pasteleria.sa/">WhatsApp</a>
+            <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                href="https://www.instagram.com/pasteleria.sa/">Facebook</a>
+        </address>
+    </footer>
+</body>
+</html>

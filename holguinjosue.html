@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panes</title>
+    <link rel="stylesheet" href="estilos/styleJ.css">
+    <style>
+        
+        #titulo{
+            text-align: center;
+            background-color: rgb(255, 173, 173);
+            font-size: 40px;
+            font-weight: bolder;
+            margin: 2rem;
+            color: rgb(48, 7, 12);
+        }
+
+        #portada{ 
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            background-color: rgb(216, 65, 82);
+        }
+        .tipo_prod{
+            display: flex;
+            flex-direction: row;
+        }
+        .titulo_p{
+            border-top: 1px solid #000000;
+            width: 99%;
+            display: inline-block;
+            padding-left: 1rem;
+            color: rgb(123, 22, 33);
+            font-family: 'Franklin Gothic Medium';
+            font-size: x-large;
+        }
+        .producto{
+            border: 1px solid rgb(48, 7, 12);
+            background-color: rgb(253, 204, 204);
+            color: rgb(48, 7, 12);
+            margin: 1rem;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            font-weight: 500;
+        }
+        .imgproducto{
+            width: 10rem;
+            height: 10rem;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadoPanaderia.png" alt="Postres_Portada" width="1271" height="120"/>
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Tortas</a></li>
+                    <li><a href="SalazarMoises.html">Postres</a></li>
+                    <li><a href="holguinjosue.html" style="background-color: rgb(255, 130, 130);">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html">Solicitar Empleo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="margin-left: 10px; margin-right: 10px;">
+          <section>
+            <h2 id="titulo">Panadería</h2>
+
+            <div class="titulo_p">
+                <h3>Panes blanco.</h3>
+            </div>
+            <div class="tipo_prod">
+                <article id="F_articulo">
+                    <p> Tenemos los mejores panes blancos hechos con los mejores ingredientes.</p>
+                </article>
+                <div class="producto">
+                    <h4>Pan Enrollado</h4>
+                    <img class="imgproducto" id="pan_enr" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="imagenes/pan_enrollado.jpg" alt="pan_enr" />
+                    <p>Precio: $0.15</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                  <h4>Pan Cachito</h4>
+                  <img class="imgproducto" id="pan_cachi" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_cachito.jpg" alt="pan_cachi"/>
+                  <p>Precio: $0.25</p>
+                  <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan bolillo</h4>
+                    <img class="imgproducto" id="pan_boli" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_bolillo.jpg" alt="pan_boli"/>
+                    <p>Precio: $0.20</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan Mixto</h4>
+                    <img class="imgproducto" id="pan_mixto" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_mixto.jpg" alt="pan_mixto"/>
+                    <p>Precio: $0.15</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+            </div>
+
+            <div class="titulo_p">
+                <h3>Panes integral.</h3>
+            </div>
+            <div class="tipo_prod">
+                <article>
+                    <p>¿Mas nutrientes? No hay problema, tenemos los mejores panes integrales.</p>
+                </article>
+                <div class="producto">
+                    <h4>Pan integral</h4>
+                    <img class="imgproducto" id="pan_integral" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_integral.jpg" alt="pan_integral"/>
+                    <p>Precio: $0.15</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan multicereal</h4>
+                    <img class="imgproducto" id="pan_multicereal" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_multicereal.jpg" alt="pan_multicereal"/>
+                    <p>Precio: $0.25</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan de Centeno</h4>
+                    <img class="imgproducto" id="pan_centeno" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_centeno.jpg" alt="pan_centeno"/>
+                    <p>Precio: $0.25</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan de Masa madre</h4>
+                    <img class="imgproducto" id="pan_masam" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_masam.jpg" alt="pan_masam"/>
+                    <p>Precio: $0.30</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+            </div>
+
+            <div class="titulo_p">
+                <h3>Panes de molde.</h3>
+            </div>
+            <div class="tipo_prod">
+                <article>
+                    <p>Panes de molde para tu desayuno o esos sanduches para la familia.</p>
+                </article>
+                <div class="producto">
+                    <h4>Pan blanco de molde</h4>
+                    <img class="imgproducto" id="pan_molde" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_molde.jpg" alt="pan_molde"/>
+                    <p>Precio: $1.25</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan integral de molde</h4>
+                    <img class="imgproducto" id="pan_moldeIn" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_moldeIn.jpg" alt="pan_moldeIn"/>
+                    <p>Precio: $1.50</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Baguette</h4>
+                    <img class="imgproducto" id="baguette" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/baguette.jpg" alt="baguette"/>
+                    <p>Precio: $1</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan Brioche</h4>
+                    <img class="imgproducto" id="pan_brioch" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_brioch.jpg" alt="pan_brioch"/>
+                    <p>Precio: $1.50</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+            </div>
+
+            <div class="titulo_p">
+                <h3>Panes de dulce.</h3>
+            </div>
+            <div class="tipo_prod">
+                <article>
+                    <p>Porque con lo dulce damos alegria a los niños y a la vida.</p>
+                </article>
+                <div class="producto">
+                    <h4>Pan de dulce</h4>
+                    <img class="imgproducto" id="pan_dulce" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_dulce.jpg" alt="pan_dulce"/>
+                    <p>Precio: $0.17</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan de piña</h4>
+                    <img class="imgproducto" id="pan_piña" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_piña.jpg" alt="pan_piña"/>
+                    <p>Precio: $0.30</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan de chocolate</h4>
+                    <img class="imgproducto" id="pan_chocolate" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_chocolate.jpg" alt="pan_chocolates"/>
+                    <p>Precio: $0.30</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+                <div class="producto">
+                    <h4>Pan Cara sucia</h4>
+                    <img class="imgproducto" id="pan_caras" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)" src="Imagenes/pan_caras.jpg" alt="pan_caras"/>
+                    <p>Precio: $0.20</p>
+                    <a href="FormularioJosue.html">Comprar</a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        const cod = (element) => document.querySelector(element);
+            var img = document.getElementById('pan_enr');
+            var img2 = document.getElementById('pan_cachi');
+            var img3 = document.getElementById('pan_boli');
+            var img4 = document.getElementById('pan_mixto');
+            var img5 = document.getElementById('pan_integral');
+            var img6 = document.getElementById('pan_multicereal');
+            var img7 = document.getElementById('pan_centeno');
+            var img8 = document.getElementById('pan_masam');
+            var img9 = document.getElementById('pan_molde');
+            var img10 = document.getElementById('pan_moldeIn');
+            var img11 = document.getElementById('baguette');
+            var img12 = document.getElementById('pan_brioch');
+            var img13 = document.getElementById('pan_dulce');
+            var img14 = document.getElementById('pan_piña');
+            var img15 = document.getElementById('pan_chocolate');
+            var img16 = document.getElementById('pan_caras');
+
+        function CambiarProd(opc){
+            
+            switch(opc.id){
+                case "pan_enr": img.src = "https://radiomorena640.com/wp-content/uploads/2021/05/PAN.jpg"; break;
+                case "pan_cachi": img2.src = "https://www.laylita.com/recetas/wp-content/uploads/2021/04/Receta-de-los-cachitos-de-jamon.jpg"; break;
+                case "pan_boli": img3.src = "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/09/como-hacer-pan-bolillo-en-casa-facil.jpg"; break;
+                case "pan_mixto": img4.src = "https://fleischmannecuador.ec/img/recetas/20-02-38PanMixto-thumb.jpg" ;break;
+                case "pan_integral": img5.src="https://www.midiariodecocina.com/wp-content/uploads/2016/06/Pan-integral-01.jpg";break;
+                case "pan_multicereal": img6.src="https://www.recetasdepan.net/wp-content/uploads/2020/08/Rreceta-de-pan-multigrano-o-multicereales.jpg" ;break;
+                case "pan_centeno": img7.src="https://1.bp.blogspot.com/-d1O6dCw9omE/YJfs1SaXT2I/AAAAAAAAECw/Yizk4C8n-XwadWO16bP8CumchCuv0OqDACLcBGAsYHQ/s0/Pan%2Bde%2BCenteno%2B%2528Instagram%2529.jpg" ;break;
+                case "pan_masam": img8.src="https://i.ytimg.com/vi/054YeGLQ-f8/maxresdefault.jpg" ;break;
+                case "pan_molde": img9.src="https://www.gastronomiavasca.net/uploads/image/file/4329/w700_pan_de_molde.jpg" ;break;
+                case "pan_moldeIn": img10.src="https://d320djwtwnl5uo.cloudfront.net/recetas/cover/pan-d_JWZrpDaCtehjPcKvMROHsGfk1qSYzd.png" ;break;
+                case "baguette": img11.src="https://www.196flavors.com/wp-content/uploads/2016/03/baguette-4-FP.jpeg" ;break;
+                case "pan_brioch": img12.src="https://www.comedera.com/wp-content/uploads/2022/02/Pan-brioche-shutterstock_1775534576.jpg" ;break;
+                case "pan_dulce": img13.src="https://www.santa-lucia.ec/wp-content/uploads/2019/01/pan_dulce.jpg" ;break;
+                case "pan_piña": img14.src="https://img-global.cpcdn.com/recipes/332ea0c2fdcdb86b/400x400cq70/photo.jpg" ;break;
+                case "pan_chocolate": img15.src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2018/07/receta-facil-de-pan-dulce-relleno-de-chocolate-buenisimo.jpg" ;break;
+                case "pan_caras": img16.src="https://pbs.twimg.com/media/C9-fYONXgAEdc7J.jpg" ;break;
+            }
+        }
+        function QuitarProd(){
+            img.src = "imagenes/pan_enrollado.jpg";
+            img2.src = "imagenes/pan_cachito.jpg";
+            img3.src = "imagenes/pan_bolillo.jpg";
+            img4.src = "imagenes/pan_mixto.jpg";
+            img5.src = "imagenes/pan_integral.jpg";
+            img6.src = "imagenes/pan_multicereal.jpg";
+            img7.src = "imagenes/pan_centeno.jpg";
+            img8.src = "imagenes/pan_masam.jpg";
+            img9.src = "imagenes/pan_molde.jpg";
+            img10.src = "imagenes/pan_moldeIn.jpg";
+            img11.src = "imagenes/baguette.jpg";
+            img12.src = "imagenes/pan_brioch.jpg";
+            img13.src = "imagenes/pan_dulce.jpg";
+            img14.src = "imagenes/pan_piña.jpg";
+            img15.src = "imagenes/pan_chocolate.jpg";
+            img16.src = "imagenes/pan_caras.jpg";
+        }
+    </script>
+
+    <footer id="footer">
+        <address style="text-align: center;">
+            <h3>Informacion</h3>
+            Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a><br>
+            Visitanos en: Guerrero Valenzuela y Carbo<br>
+            Ecuador, Guayaquil<br><br>
+            <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                href="https://www.instagram.com/pasteleria.sa/">WhatsApp</a>
+            <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                href="https://www.instagram.com/pasteleria.sa/">Facebook</a>
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocaditos</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <style>
+        #formulario {
+            width: 80%;
+            margin: auto;
+        }
+
+        .elemento img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .elemento {
+            height: 475px;
+            border: 5px solid rgb(255, 130, 130);
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 105px;
+            margin-left: 5px;
+            margin-top: 5px;
+            background-color: rgb(255, 193, 189);
+
+        }
+
+        .dulces {
+            display: flex;
+            background-color: rgb(251, 229, 229);
+            flex-wrap: wrap;
+        }
+
+        .img {
+            padding: 1px;
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .bocaditos {
+            width: 6rem;
+            height: 10rem;
+            padding: 10px;
+            background-color: rgb(254, 169, 169);
+            margin: 5px;
+        }
+
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 5px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 5px solid rgb(255, 130, 130);
+        }
+
+        select {
+            width: 100%;
+            margin: 8px 0;
+            height: 33px;
+            border: 5px solid rgb(255, 130, 130);
+            border-radius: 20px;
+        }
+
+        input[type=submit] {
+            padding: 5px 15px;
+            background: rgb(255, 130, 130);
+            border: 0 none;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+        }
+
+        .elemento:nth-child(1) {
+            grid-column: 1/5;
+        }
+
+        #galeria {
+            grid-template-rows: 280px 280px !important;
+        }
+    </style>
+    <script>
+        function validar() {
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var num = document.getElementById("num").value;
+            if (!document.getElementById("b1").checked && !document.getElementById("b2").checked && !document.getElementById("b3").checked && !document.getElementById("b4").checked && !document.getElementById("b5").checked && !document.getElementById("b6").checked && !document.getElementById("b7").checked && !document.getElementById("b8").checked && !document.getElementById("b9").checked && !document.getElementById("b10").checked && !document.getElementById("b11").checked && !document.getElementById("b12").checked && !document.getElementById("b13").checked && !document.getElementById("b14").checked && !document.getElementById("b15").checked) {
+                window.alert("Porfavor, seleccione al menos un bocadito.");
+                return false;
+            }
+            if (!/^[a-zA-Z\ áéíóúÁÉÍÓÚñÑ\s]*$/.test(nombre.trim())) {
+                window.alert("Porfavor, ingresar unicamente letras");
+                return false;
+            }
+            if (!/\S+@\S+\.\S+/.test(email.trim())) {
+                window.alert("Ingrese una direccion email valida");
+                return false;
+            }
+            if (!/^[09][0-9]{1,9}$/.test(num)) {
+                window.alert("Ingrese un numero de celular valido");
+                return false;
+            }
+            if (!document.getElementById("efectivo").checked && !document.getElementById("TarjetaCredito").checked && !document.getElementById("TarjetaDebito").checked) {
+                window.alert("Seleccione un metodo de pago.");
+                return false;
+            }
+            window.alert("Gracias por su compra");
+        }		
+    </script>
+</head>
+
+<body style="margin: 0;">
+
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadoBocaditos.png" alt="Postres_Portada" width="1271" height="120" />
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="SalazarJimmy.html">Regresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="contenedor" style="padding-top: 1rem">
+        <main>
+            <div class="dulces" style="text-align: center;">
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/alfajorcitos.jpg" alt="Alfajores" />
+                    <label for="b1">Alfajores (0.15/cu)</label>
+                    <input type="checkbox" id="b1" name="cboca1" value="sweet1">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/bombitos.jpg" alt="Bombitas de crema pastelera" />
+                    <label for="b2">Bombitas de crema pastelera (0.10/cu)</label>
+                    <input type="checkbox" id="b2" name="cboca2" value="sweet2">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/cachitos.jpg" alt="Cachitos con manjar" />
+                    <label for="b3">Cachitos con manjar (0.10/cu)</label>
+                    <input type="checkbox" id="b3" name="cboca3" value="sweet3">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/cocaditas.jpg" alt="Cocaditas" />
+                    <label for="b4">Cocaditas (0.05/cu)</label>
+                    <input type="checkbox" id="b4" name="cboca4" value="sweet4">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/minibrownie.jpg" alt="Mini Brownies" />
+                    <label for="b5">Mini Brownies (0.15/cu)</label>
+                    <input type="checkbox" id="b5" name="cboca5" value="sweet5">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/tartaletas.jpg" alt="Tartaletas de manzana" />
+                    <label for="b6">Tartaletas de manzana (0.15/cu)</label>
+                    <input type="checkbox" id="b6" name="cboca6" value="sweet6">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/trufas.jpg" alt="Trufas de Chocolate" />
+                    <label for="b7">Trufas de Chocolate (0.07/cu)</label>
+                    <input type="checkbox" id="b7" name="cboca7" value="sweet7">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/canapes.jpg" alt="Canapés de queso crema y cebollines" />
+                    <label for="b8">Canapés de queso crema y cebollines (0.20/cu)</label>
+                    <input type="checkbox" id="b8" name="cboca8" value="salad1">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/causitaspollo.jpg" alt="Causitas de pollo" />
+                    <label for="b9">Causitas de pollo (0.20/cu)</label>
+                    <input type="checkbox" id="b9" name="cboca9" value="salad2">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/chicarron.jpg" alt="Chicharrón de pollo" />
+                    <label for="b10">Chicharrón de pollo (0.20/cu)</label>
+                    <input type="checkbox" id="b10" name="cboca10" value="salad3">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/empanadascarne.jpg" alt="Empanadas de Carne" />
+                    <label for="b11">Empanadas de Carne (0.25/cu)</label>
+                    <input type="checkbox" id="b11" name="cboca11" value="salad4">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/hojarascapollo.jpg" alt="Hojarascas de Pollo" />
+                    <label for="b12">Hojarascas de Pollo (0.15/cu</label>
+                    <input type="checkbox" id="b12" name="cboca12" value="salad5">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/minitriple.jpg" alt="Mini triple de aceituna y huevo" />
+                    <label for="b13">Mini triple de aceituna y huevo (0.15/cu)</label>
+                    <input type="checkbox" id="b13" name="cboca13" value="salad6">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/rollitoscanapes.jpg" alt="Rollitos de canapes con pan molde" />
+                    <label for="b14">Rollitos de canapes con pan molde (0.12/cu)</label>
+                    <input type="checkbox" id="b14" name="cboca14" value="salad7">
+                </div>
+                <div class="bocaditos">
+                    <img class="img" src="imagenes/tequeños.jpg" alt="Tequeños con salsa de guacamole" />
+                    <label for="b15">Tequeños con salsa de guacamole (0.15/cu)</label>
+                    <input type="checkbox" id="b15" name="cboca15" value="salad8">
+                </div>
+            </div>
+
+            <div id="formulario">
+                <div class="elemento">
+                    <form>
+                        <label for="nombre">Ingrese nombre del comprador: </label><br>
+                        <input type="text" id="nombre" name="nombre"><br>
+
+                        <label for="email">Ingresa su direccion email: </label><br>
+                        <input type="text" id="email" name="email"><br>
+
+                        <label for="num">Ingresa un numero de contacto: (preferencia celular) </label><br>
+                        <input type="text" id="num" name="num"><br>
+
+                        <label for="can">Ingrese la cantidad de bocaditos (en caso de eligir mas de un bocadito ingresar
+                            la cantidad del siguiente despues de una (,) siguiendo el orden del catalogo, de izquierdas
+                            a derecha). </label><br>
+                        <input type="text" id="num" name="num"><br>
+
+                        <label for="html">Selecciona el metodo de pago: </label><br>
+                        <input type="radio" id="efectivo" name="fav_language" value="HTML">
+                        <label for="html">Efectivo</label><br>
+                        <input type="radio" id="TarjetaCredito" name="fav_language" value="CSS">
+                        <label for="css">Tarjeta de Credito</label><br>
+                        <input type="radio" id="TarjetaDebito" name="fav_language" value="JavaScript">
+                        <label for="javascript">Tarjeta de Debito</label><br>
+                        <br>
+                        <input type="submit" value="Solicitar" onclick="validar()">
+                    </form>
+                </div>
+            </div>
+    </div>
+
+    </main>
+    <br>
+    <aside>
+        <p style="color: rgb(8, 8, 8); font-size:15pt; font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(255, 202, 202); padding: 12px; margin: auto; float:right; margin-bottom: 10px;">
+            Todos los entregas de bocaditos se realizaran como minimo en 2 dias habiles dependiendo de la cantidad que
+            se solicite, tenga en cuenta que nuestro productos son fresco y se elaboran bajo pedido.</p>
+    </aside>
+    <footer>
+        <section style="padding: 20px; background-color: rgb(252, 198, 198)">
+            <div class="info" style="text-align: center;">
+                <h4>Información</h4>
+                <address >
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br><br>
+                </address>
+            </div>
+            <address style="text-align: center;">
+                <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+            </address>
+        </section>
+    </footer>
+    </div>
+</body>
+
+</html>

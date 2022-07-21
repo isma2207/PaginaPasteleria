@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ejemplo de HTML5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <link rel="stylesheet" href="estilos/estilosMS.css">
+    <title>Formulario De Venta</title>
+
+    <style>
+        nav {
+            font-weight: 600;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(252, 198, 198);
+            background-color: rgb(48, 7, 12);
+            border-radius: 5px;
+        }
+
+        .formulraio {
+            background-color: rgb(255, 234, 234);
+            border-radius: 10px;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-bottom: 35px;
+            margin-top: 50px;
+            border-style: unset;
+            border-color: rgb(48, 7, 12);
+        }
+
+        #formVenta {
+            border-style: solid;
+            border-color: rgb(255, 165, 165);
+            padding: 2.5%;
+            margin-left: 150px;
+            margin-right: 150px;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .StylTextos {
+            background-color: rgb(255, 219, 219);
+            border-radius: 10px;
+            padding: 1%;
+
+        }
+
+        .formItem {
+            padding: 0.65%;
+            border-radius: 30px 0px 30px 0px;
+            -moz-border-radius: 30px 0px 30px 0px;
+            -webkit-border-radius: 30px 0px 30px 0px;
+            border: 2px solid rgb(255, 165, 165);
+        }
+
+        .ProdUnidades {
+            text-align: center;
+        }
+
+        .imagenP {
+            width: 90px;
+            height: 90px;
+            border-radius: 7px;
+        }
+
+        .btn-primary {
+            text-align: center;
+            background-color: rgb(255, 219, 219);
+            padding: 10px;
+            color: rgb(255, 95, 95);
+            border-color: rgb(255, 165, 165);
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            border-color: rgb(255, 165, 165);
+            background-color: rgb(255, 95, 95);
+            color: aliceblue;
+        }
+    </style>
+
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/Encabezadol.png" alt="Postres_Portada" width="1271" height="120"
+                style="background-color: #60f404;" />
+        </div>
+        <div class="logo-nav-container">
+            <a href="#" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="SalazarMoises.html">Regresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="formulraio">
+            <h2>Complete los campos correspondientes para la venta</h2>
+            <form id="formVenta" onsubmit="return validar()">
+                <div class="StylTextos">
+                    <label><b>Nombres y Apellidos: </b></label>
+                    <input type="text" name="nombres" id="nombres" class="formItem" style="width: 72.5%;">
+                </div>
+                <br>
+                <div class="StylTextos">
+                    <label><b>Numero celular: </b></label>
+                    <input type="text" name="Ncelular" id="Ncelular" class="formItem" style="width: 78%;">
+                </div>
+                <br>
+                <div class="StylTextos">
+                    <label><b>Email: </b></label>
+                    <input type="text" name="correo" id="correo" class="formItem" style="width: 89%;">
+                </div>
+                <br>
+                <div class="StylTextos">
+                    <label><b>Direccion de residencia: </b></label>
+                    <input type="text" name="DirCasa" id="DirCasa" class="formItem" style="width: 69%;">
+                </div>
+                <br>
+                <div class="StylTextos">
+                    <label><b>Metodo de pago: </b></label>
+                    <select name="Mpago" id="Mpago" class="formItem" style="width: 79%;">
+                        <option value="0" style="text-align: center;">Seleccione...</option>
+                        <option value="1">Efectivo</option>
+                        <option value="2">Tarjeta de Credito</option>
+                        <option value="3">Tarjeta de Debito</option>
+                        <option value="4">Deposito Bancario</option>
+                    </select>
+                </div>
+                <br>
+                <div class="StylTextos" style="text-align: center;">
+                    <label><b>Tipo de envío para su pedido:</b></label>
+                    <br><br>
+                    <input class="prior" type="radio" name="prioridadEnvio" id="P1" value="P"><b>Premium</b>
+                    (Envio
+                    inmediato + $1.00)
+                    <input class="prior" type="radio" name="prioridadEnvio" id="E1" value="E"><b>Estandar</b>
+                    (Envio normal
+                    + $0.00)
+                </div>
+                <br>
+                <div class="StylTextos">
+                    <label><b>Seleccione los productos que desea comprar: </b></label><br>
+                    <section class="ProdUnidades">
+                        <p><input type="checkbox" name="Producto1" value="1" id="Producto1" class="sus">
+                            Fresas Con Chocolate ($2.00)</p>
+                        <img class="imagenP" src="imagenes/P1.jpg" alt="Producto_1">
+                    </section>
+                    <section class="ProdUnidades">
+                        <p><input type="checkbox" name="Producto2" value="2" id="Producto2" class="sus"> Manjar de leche
+                            con cereal blanco ($1.50)</p>
+                        <img class="imagenP" src="imagenes/P2.jpg" alt="Producto_2">
+                    </section>
+                    <section class="ProdUnidades">
+                        <p><input type="checkbox" name="Producto3" value="3" id="Producto3" class="sus"> Helado de
+                            chocolate negro y blanco ($1.50)</p>
+                        <img class="imagenP" src="imagenes/P3.jpg" alt="Producto_3">
+                    </section>
+                    <section class="ProdUnidades">
+                        <p><input type="checkbox" name="Producto4" value="4" id="Producto4" class="sus"> Crema chantilly
+                            ($1.00)</p>
+                        <img class="imagenP" src="imagenes/P4.jpg" alt="Producto_4">
+                    </section>
+                    <section class="ProdUnidades">
+                        <p><input type="checkbox" name="Producto5" value="5" id="Producto5" class="sus"> Cupcakes
+                            ($3.00)</p>
+                        <img class="imagenP" src="imagenes/P5.jpg" alt="Producto_5">
+                    </section>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <label>Observaciones sobre el elnvio:</label> <br>
+                    <textarea class="form-control" id="textoOrb" rows="3" cols="75"></textarea>
+                </div>
+                <br>
+                <div class="text-center" style="text-align: center;">
+                    <input type="submit" class="btn btn-primary" value="Comprar">
+                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+
+    <script type="text/javascript" src="Javascript/validacionesMS.js"></script>
+
+    <footer>
+        <h2>Información</h2>
+        <section style="padding: 20px; background-color: rgb(252, 198, 198)">
+
+            <div class="info" style="text-align: center;">
+
+                <address>
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br><br>
+                </address>
+            </div>
+
+            <address style="text-align: center;">
+                <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>

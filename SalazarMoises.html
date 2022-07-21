@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ejemplo de HTML5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <link rel="stylesheet" href="estilos/estilosMS.css">
+    <title>Postres</title>
+
+    <style>
+        h2 {
+            text-align: center;
+            color: rgb(252, 198, 198);
+            background-color: rgb(48, 7, 12);
+            padding: 4px;
+            margin: 25px;
+            border-radius: 5px;
+        }
+
+        .p_nombre {
+            margin-top: 45px;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #p_descrip {
+            margin-top: auto;
+            font-weight: lighter;
+            text-align: left;
+            padding: 5px;
+
+        }
+
+
+        #precio {
+            background-color: rgb(254, 88, 88);
+        }
+
+        .precio {
+            background-color: rgb(254, 145, 145);
+        }
+
+        .imagenM:hover {
+            transform: scale(1.35)
+        }
+
+        .imagenP:hover {
+            transform: scale(1.17)
+        }
+
+        .BtnComprar {
+            padding: 4px;
+            border-style: inset;
+            border-radius: 4px;
+            text-decoration: none;
+            border-color: red;
+            background-color: red;
+            color: white;
+        }
+
+        .BtnComprar:hover {
+            border-color: white;
+            background: white;
+            color: red;
+            font-weight: bold;
+        }
+
+        h4 {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/Encabezadol.png" alt="Postres_Portada" width="1271" height="120" />
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Tortas</a></li>
+                    <li><a href="SalazarMoises.html" style="background-color: rgb(255, 130, 130);">Postres</a></li>
+                    <li><a href="holguinjosue.html">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html">Solicitar Empleo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Postres - Galeria</h2>
+            <div id="contenedorPrincipal">
+
+                <div id="galeria">
+
+                    <div class="elemento">
+                        <img class="imagenM" src="imagenes/2.jpg" alt="Galeria_1">
+                    </div>
+                    <div class="elemento">
+                        <img class="imagenM" src="imagenes/3.png" alt="Galeria_2">
+                    </div>
+                    <div class="elemento">
+                        <img class="imagenM" src="imagenes/4.jpg" alt="Galeria_4">
+                    </div>
+                    <div class="elemento">
+                        <img class="imagenM" src="imagenes/5.jpg" alt="Galeria_5">
+                    </div>
+                    <div class="elemento">
+                        <img class="imagenM" src="imagenes/6.jpg" alt="Galeria_6">
+                    </div>
+                    <div class="elemento">
+                        <img class="imagenM" src="imagenes/7.jpg" alt="Galeria_7">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4><u> Mas Imagenes... (Click)</u></h4>
+                <div>
+                    <section id="galeria5">
+                        <img src="imagenes/MI1.jpg" alt="Galeria5Imaegn1">
+                        <img src="imagenes/MI2.jpg" alt="Galeria5Imaegn2">
+                        <img src="imagenes/MI3.jpg" alt="Galeria5Imaegn3">
+                        <img src="imagenes/MI4.jpeg" alt="Galeria5Imaegn4">
+                    </section>
+                    <section id="contenedorPriGaleria5">
+                        <div id="contenedorSecGaleria5">
+                            <img id="img-activa" src="imagenes/MI1.jpg" alt="Galeria5Imaegn1">
+                            <button id="btnCerrar" type="button">x</button>
+                            <button id="btnRetroceder" type="button">&lt;</button>
+                            <button id="btnAdelantar" type="button">&gt;</button>
+                        </div>
+                    </section>
+                    <script src="Javascript/validacionesMS.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Por qué escoger nuestros Postres?</h2>
+            <div class="seccion2" style="margin-top: 30px; margin-bottom: 30px;;">
+                <img src="imagenes/8.jpg" alt="Cupcake">
+                <p style="margin-left: 120px; text-align: justify;">El postre es el plato de sabor dulce o salado que se
+                    toma al final de la comida, o de merienda.
+                    Cuando se habla de postres se entiende alguna preparación dulce, bien sean cremas, tartas, pasteles,
+                    helados,
+                    bombones, etc.
+                    <u>En nuestra pasteleria</u> ofrecemso el mejor servicio de produccion de los mismos, pequeña y gran
+                    escala dependiendo
+                    de la demanda del cliente.
+                    <br><b>Profesionalismo: </b>es primordial y es nuestro primer pensamiento para poder realizar los
+                    mejores y mas destacados postres.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuestros Procesos De Fabricacion</h2>
+            <div style="text-align: center; filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));">
+                <iframe width="690" height="340" src="https://www.youtube.com/embed/wD-g_Gyn2I4" title="JaciCakes Video Publicitario -
+                Publicidad Pastelería"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Nuestros Productos</h2>
+            <div id="contenedorPrincipal2">
+                <div id="catalogo">
+
+                    <div class="elemento2">
+                        <img class="imagenP" src="imagenes/P1.jpg" alt="Producto_1">
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_nombre"><em>Fresas Con Chocolate</em></p>
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_descrip">
+                        <ul>
+                            <li><em>Producto elaborado a base chocolate exclusivamente con una receta secreta.</em></li>
+                            <li><em>Fresas frescas para complemetar.</em></li>
+                            <li><em class="precio"><b>PRECIO:</b>$2.00</em></li>
+                        </ul>
+                        <em><a class="BtnComprar" href="SalazarMoisesForm.html">Comprar</a></em>
+                    </div>
+
+                    <div class="elemento2">
+                        <img class="imagenP" src="imagenes/P2.jpg" alt="Producto_2">
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_nombre"><em>Manjar de leche con cereal blanco</em></p>
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_descrip">
+                        <ul>
+                            <li><em>Producto elaborado a base chocolate exclusivamente con una receta secreta.</em></li>
+                            <li><em>Cereal blanco para complementar.</em></li>
+                            <li><em class="precio"><b>PRECIO:</b>$1.50</em></li>
+                        </ul>
+                        <em><a class="BtnComprar" href="SalazarMoisesForm.html">Comprar</a></em>
+                    </div>
+
+
+                    <div class="elemento2">
+                        <img class="imagenP" src="imagenes/P3.jpg" alt="Producto_3">
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_nombre"><em>Helado de chocolate negro y blanco</em></p>
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_descrip">
+                        <ul>
+                            <li><em>En la linea fria tenemos un chocolate marmoleado en dos sabores.</em></li>
+                            <li><em>Cereza con chocolate en polvo para complementar.</em></li>
+                            <li><em class="precio"><b>PRECIO:</b>$1.50</em></li>
+                        </ul>
+                        <em><a class="BtnComprar" href="SalazarMoisesForm.html">Comprar</a></em>
+                    </div>
+
+
+                    <div class="elemento2">
+                        <img class="imagenP" src="imagenes/P4.jpg" alt="Producto_3">
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_nombre"><em>Crema chantilly</em></p>
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_descrip">
+                        <ul>
+                            <li><em>Crema chantilly con helado.</em></li>
+                            <li><em>Fresa y galleta oreo para complementar.</em></li>
+                            <li><em class="precio"><b>PRECIO:</b>$1.00</em></li>
+                        </ul>
+                        <em><a class="BtnComprar" href="SalazarMoisesForm.html">Comprar</a></em>
+                    </div>
+
+                    <div class="elemento2">
+                        <img class="imagenP" src="imagenes/P5.jpg" alt="Producto_3">
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_nombre"><em>Cupcakes</em></p>
+                    </div>
+                    <div class="elemento2">
+                        <p class="p_descrip">
+                        <ul>
+                            <li><em>Cupcakes de vainilla y chocolate.</em></li>
+                            <li><em>Crema chantilly y chocolate para complementar.</em></li>
+                            <li><em id="precio"><b>PRECIO:</b>$3.00</em></li>
+                        </ul>
+                        <em><a class="BtnComprar" href="SalazarMoisesForm.html">Comprar</a></em>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2 >Información</h2>
+        <section style="padding: 20px; background-color: rgb(252, 198, 198)">
+            
+            <div class="info" style="text-align: center;">
+
+                <address >
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br><br>
+                </address>
+            </div>
+
+            <address style="text-align: center;">
+                <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>

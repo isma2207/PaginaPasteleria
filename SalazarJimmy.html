@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocaditos</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <style>
+        .links{
+    background-color: rgb(255, 190, 190);
+    margin-left: 20px;
+    margin-right: 20px; 
+        }
+        .dulces{
+    display: flex;
+    background-color: rgb(251, 229, 229);
+    flex-wrap: wrap;
+        }
+        .salados{
+    display: flex;
+    background-color: rgb(252, 198, 198);
+    flex-wrap: wrap;
+        }
+        .bocaditos{
+    width: 15rem;
+    height: 20rem;
+    padding: 10px;
+    background-color:rgb(254, 169, 169);
+    margin: 5px;
+        }
+        .bocalar{
+    width: 15rem;
+    height: 21rem;
+    padding: 10px;
+    background-color:rgb(254, 169, 169);
+    margin: 5px;
+        }
+        .img{
+    padding: 1px;
+    width: 15rem;
+    height: 15rem;
+        }
+        .clearFloat{
+    clear: both;
+    margin: 0%;
+        }
+        
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadoBocaditos.png" alt="Postres_Portada" width="1271" height="120"/>
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Tortas</a></li>
+                    <li><a href="SalazarMoises.html">Postres</a></li>
+                    <li><a href="holguinjosue.html">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html" style="background-color: rgb(255, 130, 130);">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html">Solicitar Empleo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="contenedor">
+        <main>
+            <section>
+                <div class="dulces">
+                    <h4>Bocaditos dulces </h4>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/alfajorcitos.jpg" alt="Alfajores"id="ima" onmouseover="CambiarProd(this)" onmouseout="QuitarProd(this)"/>
+                        <h4>Alfajores</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/bombitos.jpg" alt="Bombitas de crema pastelera"/>
+                        <h4>Bombitas de crema pastelera</h4>
+                        <p>precio:$0.10/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/cachitos.jpg" alt="Cachitos con manjar"/>
+                        <h4>Cachitos con manjar</h4>
+                        <p>precio:$0.10/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/cocaditas.jpg" alt="Cocaditas"/>
+                        <h4>Cocaditas</h4>
+                        <p>precio:$0.05/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/minibrownie.jpg" alt="Mini Brownies"/>
+                        <h4>Mini Brownies</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/tartaletas.jpg" alt="Tartaletas de manzana"/>
+                        <h4>Tartaletas de manzana</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/trufas.jpg" alt="Trufas de Chocolate"/>
+                        <h4>Trufas de Chocolate</h4>
+                        <p>precio:$0.07/cu</p>
+                    </div>
+                </div>
+                <div class="salados">
+                    <h4>Bocaditos salados</h4>
+                    <div class="bocalar">
+                        <img class="img" src="imagenes/canapes.jpg" alt="Canapés de queso crema y cebollines"/>
+                        <h4>Canapés de queso crema y cebollines</h4>
+                        <p>precio:$0.20/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/causitaspollo.jpg" alt="Causitas de pollo"/>
+                        <h4>Causitas de pollo</h4>
+                        <p>precio:$0.20/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/chicarron.jpg" alt="Chicharrón de pollo"/>
+                        <h4>Chicharrón de pollo</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/empanadascarne.jpg" alt="Empanadas de Carne"/>
+                        <h4>Empanadas de Carne</h4>
+                        <p>precio:$0.25/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/hojarascapollo.jpg" alt="Hojarascas de Pollo"/>
+                        <h4>Hojarascas de Pollo</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/minitriple.jpg" alt="Mini triple de aceituna y huevo"/>
+                        <h4>Mini triple de aceituna y huevo</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/rollitoscanapes.jpg" alt="Rollitos de canapes con pan molde"/>
+                        <h4>Rollitos de canapes con pan molde</h4>
+                        <p>precio:$0.12/cu</p>
+                    </div>
+                    <div class="bocaditos">
+                        <img class="img" src="imagenes/tequeños.jpg" alt="Tequeños con salsa de guacamole"/>
+                        <h4>Tequeños con salsa de guacamole</h4>
+                        <p>precio:$0.15/cu</p>
+                    </div>
+                </div>
+                <div style="font-size: 20px; margin-top: 20px; margin-bottom: 20px; text-align: center;">
+                    <a href="SalazarJimmyform.html" style="padding: 10px; background-color: rgb(254, 192, 192); 
+                    border-radius: 5px; text-decoration: none; color: rgb(56, 35, 35); border-style: double;">Comprar</a>
+                </div>
+            </section>
+        </main>
+
+        <script type="text/javascript">
+            const cod = (element) => document.querySelector(element);
+                var img = document.getElementById('ima');
+                function CambiarProd(opc){
+                
+                switch(opc.id){
+                    case "ima": img.src="imagenes/Alfajores.jpg"; break;
+                }}
+                function QuitarProd(){
+                img.src = "imagenes/alfajorcitos.jpg";
+                }
+        </script>
+        
+        <aside>
+            <p style="color: rgb(8, 8, 8); font-size:15pt; font-family: 'Times New Roman', Times, serif; background-color: rgb(255, 202, 202); padding: 12px; margin: auto; float:right;">Las fiestas y celebraciones se destacan por este toque de sabor y elegancia que le dan los bocaditos, los cuales pueden ser de sal como de dulce, disponemos de accesorios para exhibición como bases, decoraciones para que la mesa de dulces o de bocaditos luzca y sea un centro de atracción en tu fiesta, solicita junto con tu pastel el montaje de la mesa, para que todo quede perfecto.</p>
+        </aside>
+
+        <div class="clearFloat"></div>
+        <footer>
+            <section style="padding: 20px; background-color: rgb(252, 198, 198)">
+                <div class="info" style="text-align: center;">
+                    <h4>Información</h4>
+                    <address>
+                        Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                        Visitanos en: Guerrero Valenzuela y Carbo<br>
+                        Ecuador, Guayaquil<br><br><br>
+                    </address>
+                </div>
+                <address style="text-align: center;">
+                    <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                        href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                    <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                        href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+                </address>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>

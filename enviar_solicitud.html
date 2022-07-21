@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar solicitud - Pastelería Florida</title>
+
+    <link rel="stylesheet" href="Estilos/styles.css">
+
+    <style>
+        #contenedorPrincipal{
+            background-color: rgb(246, 220, 245);
+            border: 3px solid rgb(45, 4, 46);
+        }
+        .formulario, h2, h3{
+            text-align: center;
+        }
+        #radioUniversidad, #graduadoA, #enCursoCampos{
+            display: none;
+        }
+        #solicitud h3{
+            border: 1px solid rgb(11, 11, 11);
+            background-color: antiquewhite;
+        }
+        .inputs, #solicitud label, .btn{
+            /* border: 1px solid red; */
+            font-size: 14pt;
+        }
+        body{
+            margin: 0;
+        }
+        #solicitud{
+            padding: 30px;
+        }
+        .referencias, .experiencias{
+            border: 1px solid black;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadolIndex.png" alt="Postres_Portada" width="1271" height="120"/>
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Tortas</a></li>
+                    <li><a href="SalazarMoises.html">Postres</a></li>
+                    <li><a href="holguinjosue.html">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html" style="background-color: rgb(255, 130, 130);">Solicitar Empleo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="contenedorPrincipal" style="padding-top: 12rem;">
+        <h2>Solicitud</h2>
+        <h3>Envíenos su solicitud, llenando los datos:</h3>
+
+        <div class="formulario">
+            <form id="solicitud">
+                <h3>DATOS PERSONALES</h3>
+                <div>
+                    <label>Cédula:</label>
+                    <input type="text" name="cedula" id="cedula" class="inputs">
+                </div>
+                <div>
+                    <label>Nombres:</label>
+                    <input type="text" name="nombres" id="nombres" class="inputs">
+                </div>
+                <div>
+                    <label>Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" class="inputs" />
+                </div>
+                <div>
+                    <label>Teléfono:</label>
+                    <input type="text" name="telefono" id="telefono" class="inputs" />
+                </div>
+                <div>
+                    <label>Dirección:</label>
+                    <input type="text" name="direccion" id="direccion" class="inputs" />
+                </div>
+                <div>
+                    <label>Género:</label>
+                    <input class="genero" id="femenino" type="radio" name="genero" id="g1" value="F" />Femenino
+                    <input class="genero" id="masculino" type="radio" name="genero" id="g2" value="M" />Masculino
+                    <input class="genero" id="otro" type="radio" name="genero" id="g3" value="O" />Otro
+                </div>
+                <div>
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha" id="fecha" class="inputs" />
+                </div> 
+                <div>
+                    <label>Email:</label>
+                    <input type="text" name="correo" id="correo" class="inputs" />
+                </div>                            
+                <div>
+                    <label>Estado Civil:</label>
+                    <select name="estado" id="estado" class="inputs">
+                        <option value="0"> Seleccione...</option>
+                        <option value="1">Soltero</option>
+                        <option value="2">casado</option>
+                        <option value="3">Viudo</option>
+                        <option value="4">Otro</option>
+                    </select>   
+                </div>
+                <h3>ESTUDIOS</h3>                    
+                <div>
+                    <label>Nombre escuela:</label>
+                    <input type="text" name="escuela" id="escuela" class="inputs" />
+                </div> 
+                <div>
+                    <label>Año graduación:</label>
+                    <input type="date" name="fechaE" id="fechaE" class="inputs" />
+                </div> 
+                <div>
+                    <label>Nombre colegio:</label>
+                    <input type="text" name="colegio" id="colegio" class="inputs" />
+                </div> 
+                <div>
+                    <label>Año graduación:</label>
+                    <input type="date" name="fechaC" id="fechaC" class="inputs" />
+                </div>
+                <div>
+                    <label>Título obtenido:</label>
+                    <input type="text" name="tituloC" id="tituloC" class="inputs" />
+                </div> 
+                
+                <div>
+                    <label>ESTUDIOS SUPERIORES:</label>
+                    <input type="radio" class="universidad" id="si"  name="universidad" onclick="mostrarCampos()">Sí
+                    <input type="radio" class="universidad" id="no" name="universidad" onclick="ocultarCampos()">No
+                </div>
+
+                <div id="radioUniversidad">
+                    <div class="radioUniversidad">
+                        <label>Nombre universidad:</label>
+                        <input type="text" name="universidad" id="universidad1" class="inputs"/>
+                    </div>
+                    <div class="radioUniversidad">
+                        <label>Carrera:</label>
+                        <input type="text" name="universidad" id="carrera" class="inputs"/>
+                    </div>
+                    <div>
+                        <label>¿Está graduado?</label>
+                        <input type="radio" class="ya graduado" id="graduado" name="radioGraduado" onclick="mostrarCalendario()">Sí
+                        <input type="radio" class="en Curso" id="enCurso" name="radioGraduado" onclick="mostrarCamposGraduado()">No
+                    </div>
+
+                    <div id="graduadoA">
+                        <label>Año graduación:</label>
+                        <input type="date" name="fechaA" id="fechaA" class="inputs" />
+                    </div>
+                    <div id="enCursoCampos">
+                        <label>Semestre:</label>
+                        <input type="text" name="semestre" id="semestre" class="inputs" />
+                    </div>
+                </div> 
+                <h3>EXPERIENCIA LABORAL</h3>  
+                <div>
+                    <input type="button" class="btn" value="Agregar" id="botonE">
+                    <input type="button" class="btn" value="Quitar" id="botonQ">
+                </div>
+                <div id="agregarExperiencia">
+                    
+                </div>
+                
+                <h3>REFERENCIA LABORAL</h3>
+                <div>
+                    <input type="button" class="btn" value="Agregar" id="botonR">
+                    <input type="button" class="btn" value="Quitar" id="botonQR">
+                </div>
+                <div id="agregarReferencia">
+
+                </div>
+
+                <h3> </h3>
+                <div class="centrar">
+                    <input type="submit" class="btn" value="Enviar" id="botonSubmit">
+                    <input type="reset" class="btn btn-primary" value="Cancelar" >
+                </div>
+            </form>  
+        </div>
+    </div>
+
+    <footer id="piePagina" style="text-align: center; color: black;">
+        <div class="piePagina">
+            <div class="info">
+                <h3>Contactos</h3>
+
+                <address style="text-align: center;">
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br>
+                </address>
+            </div>
+
+            <div class="info">
+                <nav>
+                    <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                    <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="Javascript/validaciones.js">
+    </script>
+
+</body>
+
+</html>

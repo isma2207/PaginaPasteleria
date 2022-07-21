@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ejemplo de HTML5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <!--hoja de estilo interna-->
+    <style>
+        #contenedor {
+            width: 90%;
+            margin: auto;
+            background-color: rgb(255, 236, 236);
+        }
+
+        #contenedorPrincipal {
+            width: 90%;
+            margin: 10ch;
+        }
+
+        .elemento img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .elemento {
+            height: 450px;
+            border: 5px solid #ffb2b2;
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 105px;
+            margin-left: 5px;
+            margin-top: 5px;
+            background-color: rgb(252, 207, 207);
+
+        }
+
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 5px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 5px solid #ffb2b2;
+        }
+
+        select {
+            width: 100%;
+            margin: 8px 0;
+            height: 33px;
+            border: 5px solid #ffb2b2;
+            border-radius: 20px;
+        }
+
+        input[type=submit] {
+            padding: 5px 15px;
+            background: #fccfcf;
+            border: 0 none;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+        }
+
+        .elemento:nth-child(1) {
+            grid-column: 1/5;
+        }
+
+        #galeria {
+            grid-template-rows: 280px 280px !important;
+        }
+    </style>
+    <!--vinculando hoja de estilo externa-->
+    <link rel="stylesheet" href="estilos/stylesC.css">
+    <title>TORTAS MEDIANAS</title>
+    <!--scripts-->
+    <script>
+        function validar() {
+            var fname = document.getElementById("fname").value;
+            var fmail = document.getElementById("fmail").value;
+            var fdata = document.getElementById("fdata").value;
+            if (!/^[a-zA-Z\ áéíóúÁÉÍÓÚñÑ\s]*$/.test(fname.trim())) {
+                window.alert("Solo se aceptan letras.");
+                return false;
+            }
+            if (!/\S+@\S+\.\S+/.test(fmail.trim())) {
+                window.alert("Ingrese un correo electronico valido!");
+                return false;
+            }
+            if (!/^[09][0-9]{1,9}$/.test(fdata)) {
+                window.alert("Porfavor, ingrese un numero celular válido.");
+                return false;
+            }
+            if (!document.getElementById("efectivo").checked && !document.getElementById("TarjetaCredito").checked && !document.getElementById("TarjetaDebito").checked) {
+                window.alert("Porfavor, debe seleccionar al menos un metodo de pago.");
+                return false;
+            }
+            if (!document.getElementById("p1").checked && !document.getElementById("p2").checked && !document.getElementById("p3").checked) {
+                window.alert("Porfavor, debe seleccionar al menos una personalización.");
+                return false;
+            }
+            window.alert("En unos minutos nos contactaremos con usted para concretar el pedido, gracias:)");
+        }		
+    </script>
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadoTortas.png" alt="Postres_Portada" width="1271" height="120" />
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Regresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="contenedorPrincipal">
+            <div id="galeria">
+                <div class="elemento">
+                    <form>
+                        <label for="fname">Ingresa tus nombres completos:*</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="fmail">Ingresa tu mail:*</label><br>
+                        <input type="text" id="fmail" name="fmail"><br>
+                        <label for="fdata">Ingresa tu # de celular:</label><br>
+                        <input type="text" id="fdata" name="fdata"><br>
+                        <label>Seleciona el pastel que mas te guste:*</label><br>
+                        <select name="transporte">
+                            <option>TORTA DE CHOCOLATE $ 10,00</option>
+                            <option>TORTA DE VAINILLA $10,00</option>
+                            <option>TORTA VAINILLA CON ALMENDRA $12,00</option>
+                        </select><br>
+                        <label for="html">¿Qué tipo de pago va a usar?</label><br>
+                        <input type="radio" id="efectivo" name="fav_language" value="HTML">
+                        <label for="html">Efectivo</label><br>
+                        <input type="radio" id="TarjetaCredito" name="fav_language" value="CSS">
+                        <label for="css">Tarjeta de Credito</label><br>
+                        <input type="radio" id="TarjetaDebito" name="fav_language" value="JavaScript">
+                        <label for="javascript">Tarjeta de Debito</label><br>
+                        <br>
+                        <label for="html">¿Que tipo de personalización quiere en su pastel?</label><br>
+                        <input type="checkbox" id="p1" name="vehicle1" value="Bike">
+                        <label for="p1"> Escrbir el nombre de una persona.</label><br>
+                        <input type="checkbox" id="p2" name="vehicle2" value="Car">
+                        <label for="p2"> Agregarle mas ingredientes</label><br>
+                        <input type="checkbox" id="p3" name="vehicle3" value="Boat">
+                        <label for="p3"> Mas...</label><br>
+                        <br>
+                        <input type="submit" value="Solicitar" onclick="validar()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="secciones" style="text-align: center;">
+            <h2>SECCIONES DE PASTELES </h2>
+            <article>
+                <h3 class="m">PASTELES FAMILIARES Y MEDIANOS</h3>
+                <p class="precio">PRECIOS:</p>
+            </article>
+
+        </section>
+    </main>
+    <aside style="margin-left: 120px; margin-right: 120px;">
+        <div>
+            <p id="c">ENCUENTRA PASTELES A SU AGRADO ESTAMOS UBICADO EN EL CENTRO DE LA CIUDAD</p>
+        </div>
+
+        <ul>
+            <!--hoja de estilo en linea-->
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA DE CHOCOLATE $ 10,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE VAINILLA $10,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA VAINILLA CON ALMENDRA $12,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE CHOCOLATE CON FRUTILLA $13,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA DE CAPUCHINO $10,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE VAINIILA CON BOLITAS $12,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 212, 212);">TORTA BAÑADA EN CHOCOLATE $13,00</li>
+            <li style="color:rgb(13, 13, 14); font-size:15pt; background-color: rgb(255, 232, 232);">TORTA DE JAMAICA $14,00</li>
+        </ul>
+
+
+    </aside>
+
+    <footer>
+        <section style="padding: 20px; background-color: rgb(252, 198, 198)">
+            <div class="info" style="text-align: center;">
+                <h4>Información</h4>
+                <address>
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br><br>
+                </address>
+            </div>
+            <address style="text-align: center;">
+                <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>

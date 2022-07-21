@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Florida</title>
+
+    <link rel="stylesheet" href="Estilos/styles.css">
+
+    <style>
+        #contenedorCabecera {
+            /* border: 1px solid red; */
+            height: 200px;
+            background: url(imagenes/2.jpg);
+            padding: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        #contenedorPrincipal {
+            height: 250px;
+            align-items: center;
+            margin: auto;
+            border: 10px solid rgba(253, 117, 117, 0.808);
+            padding: 10px;
+            background-color: pink;
+        }
+
+        .contenedorPrincipal {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a:hover {
+            color: rgb(11, 12, 12);
+        }
+
+        #contenedorEmpleados {
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 550px;
+            padding-left: 100px;
+            margin: 0 auto;
+        }
+
+        .empleados {
+            /* border: 1px solid red; */
+            text-align: center;
+            padding: 10px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .empleados h3{
+            font-style: italic;
+        }
+
+        .img {
+            filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+            width: 300px;
+            height: 300px;
+        }
+        .imagen:hover{
+            transform: scale(1.18)
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadolIndex.png" alt="Postres_Portada" width="1271" height="120"/>
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Tortas</a></li>
+                    <li><a href="SalazarMoises.html">Postres</a></li>
+                    <li><a href="holguinjosue.html">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html">Solicitar Empleo</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <blockquote style="font-size: 25px; color: black; margin-left: 125px;">"El antojo que te alegra el día"</blockquote>
+            </div>
+            <div id="destacados_principal">
+                <h2 style="text-align: center; text-decoration: solid;">DESTACADOS</h2>
+                <div class="destacados">
+                    <img id="imagen1 " class="imagen" src="imagenes/dulce-de-tres-leches.png" alt="Postres">
+                    <p>Dulce de tres leches</p>
+                </div>
+    
+                <div class="destacados">
+                    <img class="imagen" src="imagenes/1.1Th-sweet-spot-torta-mojada-de-chocolate.jpg" alt="Pasteles">
+                    <p>Torta mojada de chocolate</p>
+                </div>
+    
+                <div class="destacados">
+                    <img class="imagen" src="imagenes/Alfajores.jpg" alt="Alfajores">
+                    <p>Alfajores</p>
+                </div>
+    
+                <div class="destacados">
+                    <img class="imagen" src="imagenes/bolitas-de-coco.jpg" alt="Bolitas de coco">
+                    <p>Bolitas de coco</p>
+                </div>
+            </div>
+        </section>
+        <div id="contenedorPrincipal" class="contenedorPrincipal">
+            <h2>Quiénes somos</h2>
+            <p style="font-size: 19px;">Una empresa con muchos años de trayectoría, con experiencia de más de 20
+                años, con trabajadores calificados en cada área, brindando servicios de calidad, a todos nuestros
+                clientes. Trabajamos para brindar un servicio a corde a las necesidades de nuestro clientes.
+                Ofrecemos a nuestros clientes productos de la mejor calidad y frescura. Contamos con una amplia gama
+                de variedades en pan, repostería y pasteles de línea para todo tipo de gusto. También contamos con
+                una amplia gama de diseños innovadores de pasteles para eventos, boda y XV años. Así como mesas de
+                postres para disfrutar en una ocasión especial.</p>
+            <div>
+                <a href="quienes_somos.html"
+                    style="background-color: rgb(240, 206, 206); text-decoration: underline; border: 2px solid rgba(193, 13, 248, 0.596); padding: 5px; width: 110px;">VER
+                    MÁS</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="contenedor_Secundario" class="contenedor_Secundario">
+        <div class="elementos">
+            <h3>Tortas</h3>
+            <img src="imagenes/tortas.jpg" alt="Tortas">
+            <p>Tenemos una galería extensa de tortas con diferentes sabores...</p>
+            <a href="pintagcarlos.html">ver más</a>
+        </div>
+
+        <div class="elementos">
+            <h3>Postres</h3>
+            <img src="imagenes/postres.jpg" alt="Postres">
+            <p>Variedades de postres con frutas naturales, y variedad de ingredientes...</p>
+            <a href="salazarmoises.html">ver más</a>
+        </div>
+
+        <div class="elementos">
+            <h3>Panadería</h3>
+            <img src="imagenes/panaderia.jpg" alt="Panadería">
+            <p>Gran variedad de panes de dulce, sal y mixtos...</p>
+            <a href="holguinjosue.html">ver más</a>
+        </div>
+
+        <div class="elementos">
+            <h3>Bocaditos</h3>
+            <img src="imagenes/Bocaditos.jpg" alt="Bocaditos">
+            <p>Brindamos variedades de bocaditos de dulce y sal...</p>
+            <a href="salazarjimmy.html">ver más</a>
+        </div>
+    </div>
+
+    <section>
+        <div style="background-color:pink; padding:5px; margin-top:10px; margin-bottom:10px;">
+            <h3 style="text-align: center; font-size: 18pt;">NUESTRO CLIENTES</h3>
+            <div id="contenedorEmpleados" class="contenedorEmpleados">
+                <div class="empleados">
+                    <h3>JUAN</h3>
+                    <img src="imagenes/persona1.jpg" alt="Cliente 1" class="img">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, quidem. Eligendi quis quae
+                        perferendis fuga, inventore facilis! Reprehenderit, repellendus nobis, aliquid esse fuga libero
+                        facilis dolore eaque atque cumque recusandae.</p>
+                </div>
+
+                <div class="empleados">
+                    <h3>GEORGE</h3>
+                    <img src="imagenes/persona2.webp" alt="" class="img">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, quidem. Eligendi quis quae
+                        perferendis fuga, inventore facilis! Reprehenderit, repellendus nobis, aliquid esse fuga libero
+                        facilis dolore eaque atque cumque recusandae.</p>
+                </div>
+
+                <div class="empleados">
+                    <h3>LUISA</h3>
+                    <img src="imagenes/persona3.jpg" alt="" class="img">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, quidem. Eligendi quis quae
+                        perferendis fuga, inventore facilis! Reprehenderit, repellendus nobis, aliquid esse fuga libero
+                        facilis dolore eaque atque cumque recusandae.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="piePagina" style="text-align: center; color: black;">
+        <div class="piePagina">
+            <div class="info">
+                <h3>Contactos</h3>
+
+                <address style="text-align: center;">
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br>
+                </address>
+            </div>
+
+            <div class="info">
+                <nav>
+                    <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                    <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

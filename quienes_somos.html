@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quiénes somos?</title>
+
+    <link rel="stylesheet" href="Estilos/styles.css">
+
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        #contenedorCabecera {
+            /* border: 1px solid red; */
+            height: 200px;
+            background: url(imagenes/2.jpg);
+            padding: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        #contenedorQuienesSomos {
+            /* border: 1px solid red; */
+            text-align: center;
+            margin: 5px;
+            padding: 15px;
+            background-color: antiquewhite;
+        }
+
+        #contenedorMision,
+        #contenedorVision {
+            padding: 20px;
+            text-align: justify;
+            font-size: 19px;
+            margin: 10px;
+            display: inline-block;
+            width: 40%;
+            height: 30%;
+            background-color: pink;
+            border-radius: 35px;
+        }
+
+        #ContenedorObjetivos {
+            text-align: center;
+            font-size: 19px;
+            margin: 30px;
+            /* border: 1px solid red; */
+        }
+
+        #objetivos {
+            /* border: 1px solid red; */
+            margin: 10px;
+            border-radius: 20px;
+            background-color: rgb(237, 215, 241);
+            padding: 25px;
+        }
+
+        #grid {
+            /* border: 1px solid red; */
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: 10% 79% 10%;
+            grid-template-rows: 400px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            height: 430px;
+        }
+
+        #grid1 {
+            height: 400px;
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: 10% 78% 10%;
+            grid-template-rows: 400px;
+            grid-gap: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .grids:nth-child(1) {
+            text-align: center;
+            padding-top: 15px;
+            padding-right: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* .grids1:nth-child(1) {
+            text-align: center;
+            padding-top: 15px;
+            margin: 0 auto;
+            border: 1px solid red;
+        } */
+        .grids1:nth-child(2) {
+            text-align: center;
+            padding-top: 15px;
+            margin: 0 auto;
+            border: 3px solid rgb(7, 7, 7);
+            background-color: rgba(232, 154, 251, 0.387);
+        }
+
+        .grids,
+        .grids1 {
+            /* border: 1px solid red; */
+            text-align: center;
+        }
+
+        .aside img {
+            width: 75;
+            height: 75px;
+            margin: 5px;
+        }
+
+        .elemento1 div {
+            display: inline-block;
+            width: 45%;
+            padding: 10px;
+            margin-top: 50px;
+            height: 20%;
+        }
+
+        #contenedorPrincipal {
+            padding: 10px;
+            text-align: center;
+            padding-bottom: 25px;
+            background-color: rgba(254, 233, 205, 0.631);
+        }
+
+        div.elemento {
+            height: 20px
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <header class="header">
+        <div class="portada1I">
+            <img src="imagenes/EncabezadolIndex.png" alt="Postres_Portada" width="1271" height="120" />
+        </div>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_Pasteleria.png" alt="Logo_Pasteleria">
+            </a>
+            <nav class="MenuNav">
+                <ul class="menu">
+                    <li><a href="pintagcarlos.html">Tortas</a></li>
+                    <li><a href="SalazarMoises.html">Postres</a></li>
+                    <li><a href="holguinjosue.html">Panadería</a></li>
+                    <li><a href="SalazarJimmy.html">Bocaditos</a></li>
+                    <li><a href="quienes_somos.html" style="background-color: rgb(255, 130, 130);">¿Quienes Somos?</a></li>
+                    <li><a href="enviar_solicitud.html">Solicitar Empleo</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div id="grid1">
+                <div class="grids1">
+                    <div class="aside" style="margin: 5px;">
+                        <h3>Nuestros productos</h3>
+                        <p>En este sitio encontrarás toda clase de receta, de lo más básico a lo profesional</p>
+                    </div>
+                </div>
+
+                <div class="grids1">
+                    <div id="ContenedorObjetivos" class="ContenedorObjetivos">
+                        <div id="objetivos"
+                            style="height:200px; align-items:center;margin-top: 70px; background-color:  rgba(216, 130, 197, 0.685); margin: 2px solid red;">
+                            <h2>Objetivos</h2>
+                            <p>El objetivo de nuestra empresa es dar a conocer la trayectoria y experiencia profesional
+                                a través de
+                                nuestros productos, con la gran variedad y delicateces, demostramos a nuestros clientes
+                                la calidad
+                                de
+                                nuestros productos; además de nuestros precios accequibles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grids1">
+                    <aside>
+                        <div class="aside" style="padding-top: 25px; margin: 5px;">
+                            <h3>Dulces y variedades</h3>
+                            <p>En este sitio encontrarás toda clase de dulces y variedades, de lo más básico a lo
+                                profesional</p>
+                            <a id="asideA" onclick="abrirVinculo()" href="https://www.recetasgratis.net/">Ver más</a>
+                            <img src="imagenes/alfajorcitos.jpg" alt="Receta">
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <div id="contenedorQuienesSomos" class="contenedorQuienesSomos">
+            <div id="contenedorMision">
+                <h2 style="text-align: center;">Misión</h2>
+                <p>Una empresa con muchos años de trayectoría, con experiencia de más de 20
+                    años, con trabajadores calificados en cada área, brindando servicios de calidad, a todos nuestros
+                    clientes. Trabajamos para brindar un servicio a corde a las necesidades de nuestro clientes.
+                    Ofrecemos a nuestros clientes productos de la mejor calidad y frescura. Contamos con una amplia gama
+                    de variedades en pan, repostería y pasteles de línea para todo tipo de gusto. También contamos con
+                    una amplia gama de diseños innovadores de pasteles para eventos, boda y XV años. Así como mesas de
+                    postres para disfrutar en una ocasión especial.</p>
+            </div>
+
+            <div id="contenedorVision">
+                <div>
+                    <h2 style="text-align: center;">Visión</h2>
+                    <p>Una empresa con muchos años de trayectoría, con experiencia de más de 20
+                        años, con trabajadores calificados en cada área, brindando servicios de calidad, a todos
+                        nuestros
+                        clientes. Trabajamos para brindar un servicio a corde a las necesidades de nuestro clientes.
+                        Ofrecemos a nuestros clientes productos de la mejor calidad y frescura. Contamos con una amplia
+                        gama
+                        de variedades en pan, repostería y pasteles de línea para todo tipo de gusto. También contamos
+                        con
+                        una amplia gama de diseños innovadores de pasteles para eventos, boda y XV años. Así como mesas
+                        de
+                        postres para disfrutar en una ocasión especial.</p>
+                </div>
+            </div>
+        </div>
+        <div id="contenedorPrincipal" style="border: 3px solid rgb(9, 9, 9); margin: 40px;">
+            <div class="elemento">
+                <h2 style="font-size: 24pt; padding:15px">NOSOTROS</h2>
+            </div>
+
+            <div class="elemento1">
+                <div class="elemento">
+                    <h2>Acerca de nosotros</h2>
+                    <p>Una empresa con muchos años de trayectoría, con experiencia de más de 20
+                        años, con trabajadores calificados en cada área, brindando servicios de calidad, a todos
+                        nuestros
+                        clientes. Trabajamos para brindar un servicio a corde a las necesidades de nuestro clientes.
+                        Ofrecemos a nuestros clientes productos de la mejor calidad y frescura. Contamos con una amplia
+                        gama
+                        de variedades en pan, repostería y pasteles de línea para todo tipo de gusto. También contamos
+                        con
+                        una amplia gama de diseños innovadores de pasteles para eventos, boda y XV años. Así como mesas
+                        de
+                        postres para disfrutar en una ocasión especial.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente mollitia ad unde
+                        officia minima earum voluptatibus nostrum placeat labore, numquam inventore quia molestias,
+                        magni, ex autem explicabo perferendis deleniti. Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Quisquam sapiente mollitia ad unde
+                        officia minima earum voluptatibus nostrum placeat labore, numquam inventore quia molestias,
+                        magni, ex autem explicabo perferendis deleniti.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente mollitia ad unde
+                        officia minima earum voluptatibus nostrum placeat labore, numquam inventore quia molestias,
+                        magni, ex autem explicabo perferendis deleniti.</p>
+                </div>
+                <div id="elemento">
+                    <img src="imagenes/quienessomos.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div id="grid">
+            <div class="grids">
+                <div class="aside">
+                    <!-- <h3>Nuestros productos</h3>
+                    <p>En este sitio encontrarás toda clase de receta, de lo más básico a lo profesional</p> -->
+                </div>
+            </div>
+
+            <div class="grids">
+                <h3></h3>
+                <iframe class="linea" width="653" height="380" src="https://www.youtube.com/embed/xp8_MI6GRsU"
+                    title="Brigadeiros de Chocolate muy Fácil con 3 Ingredientes y SIN horno"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="grids">
+                <aside>
+                    <div class="aside">
+                        <h3>Encuentra recetas de comida</h3>
+                        <p>En este sitio encontrarás toda clase de receta, de lo más básico a lo profesional</p>
+                        <a id="asideB" onclick="abrirVinculo2()" href="https://www.recetasgratis.net/">Ver más</a>
+                        <img src="imagenes/receta1.webp" alt="Receta">
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer id="piePagina" style="text-align: center; color: black;">
+        <div class="piePagina">
+            <div class="info">
+                <h3>Contactos</h3>
+
+                <address style="text-align: center;">
+                    Desarrollado por <a href="mailto:pasteleria@example.com">Pastelería S.A.</a>.<br>
+                    Visitanos en: Guerrero Valenzuela y Carbo<br>
+                    Ecuador, Guayaquil<br><br>
+                </address>
+            </div>
+
+            <div class="info">
+                <nav>
+                    <a style="background-color: #60f404; padding: 12px; border-radius: 15px"
+                    href="https://www.facebook.com/artefactaecuador">WhatsApp</a>
+                    <a style="background-color: #220ff6; padding: 12px; border-radius: 15px; color: rgb(255, 255, 255);"
+                    href="https://www.instagram.com/artefacta_ec/?hl=es">Facebook</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function abrirVinculo() {
+            const link = document.getElementById("asideA");
+            link.target = "_blank";
+
+            // for(i=0; i<links.length; i++){
+            //     if(links[i]===nodoA){
+            //         flag = true;
+
+            //     }else{
+            //         flag = false;
+            //     }
+            // }
+        }
+        function abrirVinculo2() {
+            const link = document.getElementById("asideB");
+            link.target = "_blank";
+        }
+
+    </script>
+</body>
+
+</html>
